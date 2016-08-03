@@ -1,0 +1,927 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: awgn_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "awgn_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "awgn_top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : awgn_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/tausworthe.v" into library work
+Parsing module <tausworthe>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/shifters.v" into library work
+Parsing module <lshift1>.
+Parsing module <lshift2>.
+Parsing module <lshift4>.
+Parsing module <lshift8>.
+Parsing module <lshift16>.
+Parsing module <lshift32>.
+Parsing module <lshift_48>.
+Parsing module <rshift1_32>.
+Parsing module <rshift2_32>.
+Parsing module <rshift4_32>.
+Parsing module <rshift8_32>.
+Parsing module <rshift16_32>.
+Parsing module <rshift32>.
+Parsing module <rshift_32>.
+Parsing module <rshift_8>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/mem_64x19.v" into library work
+Parsing module <mem_64x19>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/mem_256x35.v" into library work
+Parsing module <mem_128x52>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/mem_128x19.v" into library work
+Parsing module <mem_128x19>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/lzd48.v" into library work
+Parsing module <lzd2>.
+Parsing module <lzd4>.
+Parsing module <lzd8>.
+Parsing module <lzd16>.
+Parsing module <lzd32>.
+Parsing module <lzd48>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/taus_wrapper.v" into library work
+Parsing module <taus_wrapper>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v" into library work
+Parsing module <sqrt>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/sincos_block.v" into library work
+Parsing module <sincos_block>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/log_block.v" into library work
+Parsing module <log_block>.
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/awgn_top.v" into library work
+Parsing module <awgn_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <awgn_top>.
+
+Elaborating module <taus_wrapper>.
+
+Elaborating module <tausworthe>.
+
+Elaborating module <log_block>.
+
+Elaborating module <mem_128x52>.
+Reading initialization file \"mem_coeff_log.list\".
+
+Elaborating module <lzd48>.
+
+Elaborating module <lzd32>.
+
+Elaborating module <lzd16>.
+
+Elaborating module <lzd8>.
+
+Elaborating module <lzd4>.
+
+Elaborating module <lzd2>.
+WARNING:HDLCompiler:1127 - "/home/eng/h/hxh141130/awgn_ip_core/log_block.v" Line 63: Assignment to lzd_v ignored, since the identifier is never used
+
+Elaborating module <lshift_48>.
+
+Elaborating module <lshift1>.
+
+Elaborating module <lshift2>.
+
+Elaborating module <lshift4>.
+
+Elaborating module <lshift8>.
+
+Elaborating module <lshift16>.
+
+Elaborating module <lshift32>.
+WARNING:HDLCompiler:1127 - "/home/eng/h/hxh141130/awgn_ip_core/log_block.v" Line 69: Assignment to x_a ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/eng/h/hxh141130/awgn_ip_core/log_block.v" Line 42: Net <wdata[51]> does not have a driver.
+
+Elaborating module <sqrt>.
+
+Elaborating module <mem_64x19>.
+Reading initialization file \"mem_coeff_sqrt.list\".
+WARNING:HDLCompiler:189 - "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v" Line 51: Size mismatch in connection of port <wdata>. Formal port size is 19-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v" Line 56: Assignment to v1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v" Line 96: Assignment to in_reg ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v" Line 37: Net <wdata> does not have a driver.
+
+Elaborating module <sincos_block>.
+
+Elaborating module <mem_128x19>.
+Reading initialization file \"mem_coeff_cos.list\".
+WARNING:HDLCompiler:189 - "/home/eng/h/hxh141130/awgn_ip_core/sincos_block.v" Line 52: Size mismatch in connection of port <wdata>. Formal port size is 19-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:413 - "/home/eng/h/hxh141130/awgn_ip_core/sincos_block.v" Line 127: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/eng/h/hxh141130/awgn_ip_core/sincos_block.v" Line 94: Assignment to quad_reg ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/eng/h/hxh141130/awgn_ip_core/sincos_block.v" Line 52: Net <wdata> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <awgn_top>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/awgn_top.v".
+    Found 17x15-bit multiplier for signal <y0> created at line 59.
+    Found 17x15-bit multiplier for signal <y1> created at line 60.
+    Summary:
+	inferred   2 Multiplier(s).
+Unit <awgn_top> synthesized.
+
+Synthesizing Unit <taus_wrapper>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/taus_wrapper.v".
+    Summary:
+	no macro.
+Unit <taus_wrapper> synthesized.
+
+Synthesizing Unit <tausworthe>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/tausworthe.v".
+    Found 32-bit register for signal <p0>.
+    Found 32-bit register for signal <p1>.
+    Found 32-bit register for signal <p2>.
+    Found 32-bit register for signal <r>.
+    Found 1-bit register for signal <flag>.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <tausworthe> synthesized.
+
+Synthesizing Unit <log_block>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/log_block.v".
+INFO:Xst:3210 - "/home/eng/h/hxh141130/awgn_ip_core/log_block.v" line 63: Output port <v> of the instance <lzd_log1> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <wdata> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 6-bit register for signal <exp_e_reg>.
+    Found 48-bit register for signal <x_e_reg>.
+    Found 31-bit register for signal <e>.
+    Found 23-bit subtractor for signal <m2> created at line 83.
+    Found 31-bit subtractor for signal <y_e_sub> created at line 90.
+    Found 32-bit subtractor for signal <e_temp> created at line 97.
+    Found 6-bit adder for signal <exp_e> created at line 64.
+    Found 22-bit adder for signal <m4> created at line 84.
+    Found 31-bit adder for signal <n0070> created at line 89.
+    Found 40x13-bit multiplier for signal <m1> created at line 78.
+    Found 22x40-bit multiplier for signal <m3> created at line 87.
+    Found 6x26-bit multiplier for signal <e_bar> created at line 95.
+    WARNING:Xst:2404 -  FFs/Latches <c2_log_reg<1:1>> (without init value) have a constant value of 0 in block <log_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c2_log_reg<1:3>> (without init value) have a constant value of 1 in block <log_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c2_log_reg<3:3>> (without init value) have a constant value of 0 in block <log_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c2_log_reg<3:6>> (without init value) have a constant value of 1 in block <log_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c2_log_reg<6:7>> (without init value) have a constant value of 0 in block <log_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c2_log_reg<7:7>> (without init value) have a constant value of 1 in block <log_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c2_log_reg<7:7>> (without init value) have a constant value of 0 in block <log_block>.
+    WARNING:Xst:2404 -  FFs/Latches <we<0:0>> (without init value) have a constant value of 0 in block <log_block>.
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  85 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <log_block> synthesized.
+
+Synthesizing Unit <mem_128x52>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/mem_256x35.v".
+        DATA_WIDTH = 51
+        ADDR_WIDTH = 7
+        DATA_DEPTH = 127
+    Found 128x52-bit single-port RAM <Mram_mem> for signal <mem>.
+    Found 52-bit register for signal <data_out>.
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Summary:
+	inferred   1 RAM(s).
+	inferred  52 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  52 Tristate(s).
+Unit <mem_128x52> synthesized.
+
+Synthesizing Unit <lzd48>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/lzd48.v".
+    Summary:
+	inferred   5 Multiplexer(s).
+Unit <lzd48> synthesized.
+
+Synthesizing Unit <lzd32>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/lzd48.v".
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <lzd32> synthesized.
+
+Synthesizing Unit <lzd16>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/lzd48.v".
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <lzd16> synthesized.
+
+Synthesizing Unit <lzd8>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/lzd48.v".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <lzd8> synthesized.
+
+Synthesizing Unit <lzd4>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/lzd48.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <lzd4> synthesized.
+
+Synthesizing Unit <lzd2>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/lzd48.v".
+    Summary:
+	no macro.
+Unit <lzd2> synthesized.
+
+Synthesizing Unit <lshift_48>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/shifters.v".
+    Summary:
+	no macro.
+Unit <lshift_48> synthesized.
+
+Synthesizing Unit <lshift1>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/shifters.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <lshift1> synthesized.
+
+Synthesizing Unit <lshift2>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/shifters.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <lshift2> synthesized.
+
+Synthesizing Unit <lshift4>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/shifters.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <lshift4> synthesized.
+
+Synthesizing Unit <lshift8>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/shifters.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <lshift8> synthesized.
+
+Synthesizing Unit <lshift16>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/shifters.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <lshift16> synthesized.
+
+Synthesizing Unit <lshift32>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/shifters.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <lshift32> synthesized.
+
+Synthesizing Unit <sqrt>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v".
+INFO:Xst:3210 - "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v" line 56: Output port <v> of the instance <lzd_sqrt1> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <wdata> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 26-bit register for signal <x_f_reg>.
+    Found 1-bit register for signal <exp_f_reg<5>>.
+    Found 6-bit register for signal <exp_fbar_reg>.
+    Found 17-bit register for signal <out>.
+    Found 6-bit subtractor for signal <exp_f> created at line 57.
+    Found 6-bit subtractor for signal <n0061> created at line 67.
+    Found 6-bit subtractor for signal <ls_val> created at line 93.
+    Found 6-bit adder for signal <exp_f[5]_GND_74_o_add_2_OUT> created at line 58.
+    Found 6-bit adder for signal <n0062> created at line 67.
+    Found 20-bit adder for signal <n0094> created at line 79.
+    Found 20-bit adder for signal <n0097> created at line 80.
+    Found 12x25-bit multiplier for signal <x24> created at line 75.
+    Found 12x25-bit multiplier for signal <x12> created at line 76.
+    Found 46-bit shifter logical right for signal <y_ans_temp[45]_exp_fbar_reg[5]_shift_right_19_OUT> created at line 85
+    Found 46-bit shifter logical left for signal <y_ans_temp[45]_exp_fbar_reg[5]_shift_left_20_OUT> created at line 85
+    Found 46-bit shifter logical left for signal <y_f_temp[45]_ls_val[5]_shift_left_24_OUT> created at line 94
+    Found 6-bit 3-to-1 multiplexer for signal <exp_fbar> created at line 27.
+    WARNING:Xst:2404 -  FFs/Latches <we<0:0>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<1:1>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<1:2>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<2:2>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<2:2>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<2:2>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<2:2>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<2:2>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<2:4>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_24<4:4>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<1:2>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<2:2>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<2:2>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<2:3>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<3:3>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<3:3>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<3:4>> (without init value) have a constant value of 1 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<4:4>> (without init value) have a constant value of 0 in block <sqrt>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_12<4:4>> (without init value) have a constant value of 1 in block <sqrt>.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <sqrt> synthesized.
+
+Synthesizing Unit <mem_64x19>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/mem_64x19.v".
+        DATA_WIDTH = 19
+        ADDR_WIDTH = 6
+        DATA_DEPTH = 64
+    Found 64x19-bit single-port RAM <Mram_mem> for signal <mem>.
+    Found 19-bit register for signal <data_out>.
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 42
+    Summary:
+	inferred   1 RAM(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  19 Tristate(s).
+Unit <mem_64x19> synthesized.
+
+Synthesizing Unit <sincos_block>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/sincos_block.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <wdata> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 2-bit register for signal <quad>.
+    Found 14-bit register for signal <x_g_a_reg>.
+    Found 14-bit register for signal <x_g_b_reg>.
+    Found 16-bit register for signal <g0_temp1>.
+    Found 16-bit register for signal <g1_temp1>.
+    Found 16-bit register for signal <g0>.
+    Found 16-bit register for signal <g1>.
+    Found 14-bit subtractor for signal <x_g_b> created at line 60.
+    Found 21-bit subtractor for signal <m2a> created at line 78.
+    Found 21-bit subtractor for signal <m2b> created at line 79.
+    Found 20-bit adder for signal <m4a> created at line 81.
+    Found 20-bit adder for signal <m4b> created at line 82.
+    Found 12x7-bit multiplier for signal <m1a<18:0>> created at line 75.
+    Found 12x7-bit multiplier for signal <m1b<18:0>> created at line 76.
+    Found 15-bit 3-to-1 multiplexer for signal <GND_96_o_y_g_a[19]_mux_37_OUT> created at line 92.
+    Found 16-bit 4-to-1 multiplexer for signal <n0095> created at line 94.
+    WARNING:Xst:2404 -  FFs/Latches <c1_sincos<1:1>> (without init value) have a constant value of 1 in block <sincos_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_sincos<1:4>> (without init value) have a constant value of 0 in block <sincos_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_sincos<4:4>> (without init value) have a constant value of 1 in block <sincos_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_sincos<4:4>> (without init value) have a constant value of 0 in block <sincos_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_sincos<4:5>> (without init value) have a constant value of 1 in block <sincos_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_sincos<5:6>> (without init value) have a constant value of 0 in block <sincos_block>.
+    WARNING:Xst:2404 -  FFs/Latches <c1_sincos<6:6>> (without init value) have a constant value of 1 in block <sincos_block>.
+    WARNING:Xst:2404 -  FFs/Latches <we<0:0>> (without init value) have a constant value of 0 in block <sincos_block>.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  94 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <sincos_block> synthesized.
+
+Synthesizing Unit <mem_128x19>.
+    Related source file is "/home/eng/h/hxh141130/awgn_ip_core/mem_128x19.v".
+        DATA_WIDTH = 19
+        ADDR_WIDTH = 7
+        DATA_DEPTH = 128
+    Found 128x19-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 19-bit register for signal <data_out_1>.
+    Found 19-bit register for signal <data_out_0>.
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 46
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Found 1-bit tristate buffer for signal <wdata<0>> created at line 64
+    Summary:
+	inferred   1 RAM(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred  38 Tristate(s).
+Unit <mem_128x19> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x19-bit dual-port RAM                              : 1
+ 128x52-bit single-port RAM                            : 1
+ 64x19-bit single-port RAM                             : 1
+# Multipliers                                          : 9
+ 12x7-bit multiplier                                   : 2
+ 17x15-bit multiplier                                  : 2
+ 25x12-bit multiplier                                  : 2
+ 26x6-bit multiplier                                   : 1
+ 40x13-bit multiplier                                  : 1
+ 40x22-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 18
+ 14-bit subtractor                                     : 1
+ 20-bit adder                                          : 4
+ 21-bit subtractor                                     : 2
+ 22-bit adder                                          : 1
+ 23-bit subtractor                                     : 1
+ 31-bit adder                                          : 1
+ 31-bit subtractor                                     : 1
+ 32-bit subtractor                                     : 1
+ 6-bit adder                                           : 2
+ 6-bit addsub                                          : 1
+ 6-bit subtractor                                      : 3
+# Registers                                            : 28
+ 1-bit register                                        : 3
+ 14-bit register                                       : 2
+ 16-bit register                                       : 4
+ 17-bit register                                       : 1
+ 19-bit register                                       : 3
+ 2-bit register                                        : 1
+ 26-bit register                                       : 1
+ 31-bit register                                       : 1
+ 32-bit register                                       : 8
+ 48-bit register                                       : 1
+ 52-bit register                                       : 1
+ 6-bit register                                        : 2
+# Multiplexers                                         : 125
+ 1-bit 2-to-1 multiplexer                              : 83
+ 15-bit 2-to-1 multiplexer                             : 2
+ 15-bit 3-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 16-bit 4-to-1 multiplexer                             : 1
+ 19-bit 2-to-1 multiplexer                             : 5
+ 20-bit 2-to-1 multiplexer                             : 2
+ 22-bit 2-to-1 multiplexer                             : 2
+ 27-bit 2-to-1 multiplexer                             : 1
+ 30-bit 2-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 6
+ 46-bit 2-to-1 multiplexer                             : 3
+ 48-bit 2-to-1 multiplexer                             : 12
+ 52-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 6-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 46-bit shifter logical left                           : 2
+ 46-bit shifter logical right                          : 1
+# Tristates                                            : 109
+ 1-bit tristate buffer                                 : 109
+# Xors                                                 : 16
+ 32-bit xor2                                           : 16
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <x_e_reg_47> of sequential type is unconnected in block <l1>.
+
+Synthesizing (advanced) Unit <awgn_top>.
+INFO:Xst:3226 - The RAM <sc1/mem/Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <sc1/mem/data_out_0> <sc1/mem/data_out_1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 19-bit                   |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <u1<13:7>>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sc1/mem/data_out_0> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 128-word x 19-bit                   |          |
+    |     mode           | no-change                           |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     weB            | connected to signal <GND>           | high     |
+    |     addrB          | connected to signal <sc1/x_g_b<13:7>> |          |
+    |     diB            | connected to signal <GND>           |          |
+    |     doB            | connected to signal <sc1/mem/data_out_1> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <awgn_top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mem_128x52>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 52-bit                   |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <mem_128x52> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mem_64x19>.
+INFO:Xst:3231 - The small RAM <Mram_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 19-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <mem_64x19> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sincos_block>.
+	Multiplier <Mmult_m1a<18:0>> in block <sincos_block> and adder/subtractor <Msub_m2a> in block <sincos_block> are combined into a MAC<Maddsub_m1a<18:0>>.
+	Multiplier <Mmult_m1b<18:0>> in block <sincos_block> and adder/subtractor <Msub_m2b> in block <sincos_block> are combined into a MAC<Maddsub_m1b<18:0>>.
+Unit <sincos_block> synthesized (advanced).
+WARNING:Xst:2677 - Node <x_e_reg_47> of sequential type is unconnected in block <log_block>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x19-bit dual-port block RAM                        : 1
+ 128x52-bit single-port block RAM                      : 1
+ 64x19-bit single-port distributed RAM                 : 1
+# MACs                                                 : 2
+ 12x7-to-21-bit MAC                                    : 2
+# Multipliers                                          : 7
+ 17x15-bit multiplier                                  : 2
+ 25x12-bit multiplier                                  : 2
+ 26x6-bit multiplier                                   : 1
+ 40x13-bit multiplier                                  : 1
+ 40x22-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 16
+ 14-bit subtractor                                     : 1
+ 20-bit adder                                          : 4
+ 22-bit adder                                          : 1
+ 23-bit subtractor                                     : 1
+ 31-bit adder                                          : 1
+ 31-bit subtractor                                     : 1
+ 32-bit subtractor                                     : 1
+ 6-bit adder                                           : 2
+ 6-bit addsub                                          : 1
+ 6-bit subtractor                                      : 3
+# Registers                                            : 505
+ Flip-Flops                                            : 505
+# Multiplexers                                         : 101
+ 1-bit 2-to-1 multiplexer                              : 59
+ 15-bit 2-to-1 multiplexer                             : 2
+ 15-bit 3-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 16-bit 4-to-1 multiplexer                             : 1
+ 19-bit 2-to-1 multiplexer                             : 5
+ 20-bit 2-to-1 multiplexer                             : 2
+ 22-bit 2-to-1 multiplexer                             : 2
+ 27-bit 2-to-1 multiplexer                             : 1
+ 30-bit 2-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 6
+ 46-bit 2-to-1 multiplexer                             : 3
+ 48-bit 2-to-1 multiplexer                             : 12
+ 52-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 6-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 46-bit shifter logical left                           : 2
+ 46-bit shifter logical right                          : 1
+# Xors                                                 : 16
+ 32-bit xor2                                           : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+ERROR:Xst:528 - Multi-source in Unit <awgn_top> on signal <wdata<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<0>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<1>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<2>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<3>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<4>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<5>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<6>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<7>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<8>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<9>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<10>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<11>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<12>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<13>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<14>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<15>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<16>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<17>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_1<18>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<0>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<1>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<2>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<3>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<4>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<5>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<6>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<7>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<8>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<9>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<10>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<11>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<12>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<13>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<14>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<15>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<16>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<17>>
+   Output signal of BUFT instance <sc1/mem/wdata<0>_data_out_0<18>>
+   Dangling signal <N1> in Unit <tausworthe> is tied to 0 by XST
+   Dangling signal <N1> in Unit <tausworthe> is tied to 0 by XST
+   Dangling signal <we> in Unit <sincos_block> is tied to 0 by XST
+   Dangling signal <wdata<0>> in Unit <mem_128x19> is tied to 0 by XST
+
+ERROR:Xst:528 - Multi-source in Unit <mem_128x52> on signal <wdata<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<50>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<49>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<48>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<45>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<47>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<46>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<44>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<43>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<42>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<41>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<38>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<40>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<39>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<37>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<36>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<35>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<34>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<31>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<33>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<32>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<28>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<30>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<29>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<25>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<27>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<26>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<24>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<23>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<22>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<21>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<18>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<20>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<19>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<17>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<16>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<15>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<14>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<11>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<13>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<12>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<10>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<9>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<8>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<7>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<4>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<6>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<5>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<1>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<3>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<2>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<0>>
+   Output signal of BUFT instance <l1/mem/wdata<0>_data_out<51>>
+   Signal <l1/mem/wdata<0>> in Unit <mem_128x52> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <mem_64x19> on signal <wdata<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<18>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<15>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<17>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<16>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<12>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<14>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<13>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<11>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<10>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<7>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<9>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<8>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<4>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<6>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<5>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<1>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<3>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<2>>
+   Output signal of BUFT instance <sq1/mem/wdata<0>_data_out<0>>
+   Signal <sq1/mem/wdata<0>> in Unit <mem_64x19> is assigned to GND
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.48 secs
+ 
+--> 
+
+
+Total memory usage is 609508 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :   52 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

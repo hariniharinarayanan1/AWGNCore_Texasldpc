@@ -1,0 +1,55 @@
+Running: /proj/cad/xilinx_14.7/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/eng/h/hxh141130/awgn_ip_core/tb_awgn_top_isim_beh.exe" -prj "/home/eng/h/hxh141130/awgn_ip_core/tb_awgn_top_beh.prj" "work.tb_awgn_top" "work.glbl" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/tausworthe.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/shifters.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/mem_64x19.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/mem_256x35.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/mem_128x19.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/lzd48.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/taus_wrapper.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/sincos_block.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/log_block.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/awgn_top.v" into library work
+Analyzing Verilog file "/home/eng/h/hxh141130/awgn_ip_core/tb_awgn_top.v" into library work
+Analyzing Verilog file "/proj/cad/xilinx_14.7/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "/home/eng/h/hxh141130/awgn_ip_core/sqrt.v" Line 51: Size mismatch in connection of port <wdata>. Formal port size is 19-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/eng/h/hxh141130/awgn_ip_core/sincos_block.v" Line 52: Size mismatch in connection of port <wdata>. Formal port size is 19-bit while actual signal size is 1-bit.
+Completed static elaboration
+Fuse Memory Usage: 95216 KB
+Fuse CPU Usage: 2440 ms
+Compiling module tausworthe
+Compiling module taus_wrapper
+Compiling module mem_128x52
+Compiling module lzd2
+Compiling module lzd4
+Compiling module lzd8
+Compiling module lzd16
+Compiling module lzd32
+Compiling module lzd48
+Compiling module lshift1
+Compiling module lshift2
+Compiling module lshift4
+Compiling module lshift8
+Compiling module lshift16
+Compiling module lshift32
+Compiling module lshift_48
+Compiling module log_block
+Compiling module mem_64x19
+Compiling module sqrt
+Compiling module mem_128x19
+Compiling module sincos_block
+Compiling module awgn_top
+Compiling module tb_awgn_top
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 24 Verilog Units
+Built simulation executable /home/eng/h/hxh141130/awgn_ip_core/tb_awgn_top_isim_beh.exe
+Fuse Memory Usage: 2226732 KB
+Fuse CPU Usage: 2520 ms
+GCC CPU Usage: 280 ms

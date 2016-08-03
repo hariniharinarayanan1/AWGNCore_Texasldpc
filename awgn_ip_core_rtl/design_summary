@@ -1,0 +1,64 @@
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x19-bit dual-port RAM                              : 1
+ 128x52-bit single-port RAM                            : 1
+ 64x19-bit single-port RAM                             : 1
+# Multipliers                                          : 9
+ 12x7-bit multiplier                                   : 2
+ 17x15-bit multiplier                                  : 2
+ 25x12-bit multiplier                                  : 2
+ 26x6-bit multiplier                                   : 1
+ 40x13-bit multiplier                                  : 1
+ 40x22-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 18
+ 14-bit subtractor                                     : 1
+ 20-bit adder                                          : 4
+ 21-bit subtractor                                     : 2
+ 22-bit adder                                          : 1
+ 23-bit subtractor                                     : 1
+ 31-bit adder                                          : 1
+ 31-bit subtractor                                     : 1
+ 32-bit subtractor                                     : 1
+ 6-bit adder                                           : 2
+ 6-bit addsub                                          : 1
+ 6-bit subtractor                                      : 3
+# Registers                                            : 28
+ 1-bit register                                        : 3
+ 14-bit register                                       : 2
+ 16-bit register                                       : 4
+ 17-bit register                                       : 1
+ 19-bit register                                       : 3
+ 2-bit register                                        : 1
+ 26-bit register                                       : 1
+ 31-bit register                                       : 1
+ 32-bit register                                       : 8
+ 48-bit register                                       : 1
+ 52-bit register                                       : 1
+ 6-bit register                                        : 2
+# Multiplexers                                         : 125
+ 1-bit 2-to-1 multiplexer                              : 83
+ 15-bit 2-to-1 multiplexer                             : 2
+ 15-bit 3-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 16-bit 4-to-1 multiplexer                             : 1
+ 19-bit 2-to-1 multiplexer                             : 5
+ 20-bit 2-to-1 multiplexer                             : 2
+ 22-bit 2-to-1 multiplexer                             : 2
+ 27-bit 2-to-1 multiplexer                             : 1
+ 30-bit 2-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 6
+ 46-bit 2-to-1 multiplexer                             : 3
+ 48-bit 2-to-1 multiplexer                             : 12
+ 52-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 6-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 46-bit shifter logical left                           : 2
+ 46-bit shifter logical right                          : 1
+# Tristates                                            : 109
+ 1-bit tristate buffer                                 : 109
+# Xors                                                 : 16
+ 32-bit xor2                                           : 16

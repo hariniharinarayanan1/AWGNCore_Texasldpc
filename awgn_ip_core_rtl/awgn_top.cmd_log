@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/eng/h/hxh141130/awgn_ip_core/awgn_top.xst" -ofn "/home/eng/h/hxh141130/awgn_ip_core/awgn_top.syr" 
